@@ -1,0 +1,16 @@
+[project]
+name = "cyberattackanalysis"
+version = "0.1.0"
+description = "Network attack analysis system for creating effective defense strategies"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=2.0",
+    "scikit-learn>=1.5",
+    "xgboost>=2.1",
+    "matplotlib>=3.9",
+    "seaborn>=0.13",
+    "joblib>=1.4",
+    "imbalanced-learn>=0.12",
+]

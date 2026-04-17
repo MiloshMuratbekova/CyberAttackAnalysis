@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Large data files
+input/*.csv
+input/*.txt
+
+# Model artifacts
+output/*.joblib
+output/*.png
+output/*.csv

@@ -1,0 +1,70 @@
+============================================================
+  ATTACK ANALYSIS REPORT
+============================================================
+
+  Model used:       xgboost
+  Model F1-score:   0.9598
+  Model accuracy:   0.9987
+  Total records:    56555
+  Attacks detected: 56555 (100.0%)
+  Normal traffic:   0 (0.0%)
+
+  DETECTED ATTACK DISTRIBUTION
+  ────────────────────────────────────────
+  Category           Count  Percent  Priority  
+  ────────────────────────────────────────
+  benign             45383    80.2%  LOW       
+  dos                 5037     8.9%  HIGH      
+  portscan            3219     5.7%  MEDIUM    
+  ddos                2559     4.5%  CRITICAL  
+  brute_force          274     0.5%  HIGH      
+  web_attack            44     0.1%  CRITICAL  
+  botnet                38     0.1%  CRITICAL  
+  infiltration           1     0.0%  CRITICAL  
+
+  THREAT ASSESSMENT PER CATEGORY
+  ────────────────────────────────────────
+
+  [CRITICAL] Distributed Denial of Service (DDoS)
+  Description: Large-scale volumetric attacks from multiple sources to exhaust bandwidth and resources.
+  Detected:    2559 records (4.5%)
+  Risk level:  CRITICAL
+
+  [CRITICAL] Web Attacks (Brute Force, XSS, SQL Injection)
+  Description: Application-layer attacks targeting web services including XSS, SQL injection, and web brute force.
+  Detected:    44 records (0.1%)
+  Risk level:  CRITICAL
+
+  [CRITICAL] Botnet
+  Description: Compromised hosts communicating with command-and-control servers for coordinated malicious activity.
+  Detected:    38 records (0.1%)
+  Risk level:  CRITICAL
+
+  [CRITICAL] Infiltration
+  Description: Stealthy attacks that establish a foothold inside the network using exploits or social engineering.
+  Detected:    1 records (0.0%)
+  Risk level:  CRITICAL
+
+  [HIGH] Denial of Service (DoS)
+  Description: Attacks aimed at making services unavailable by overwhelming them (slowloris, Slowhttptest, Hulk, GoldenEye, Heartbleed).
+  Detected:    5037 records (8.9%)
+  Risk level:  HIGH
+
+  [HIGH] Brute Force (FTP/SSH Patator)
+  Description: Credential brute-force attacks against FTP and SSH services using dictionaries.
+  Detected:    274 records (0.5%)
+  Risk level:  HIGH
+
+  [MEDIUM] Port Scanning / Reconnaissance
+  Description: Network scanning to discover open ports, services, and vulnerabilities for future exploitation.
+  Detected:    3219 records (5.7%)
+  Risk level:  MEDIUM
+
+  [LOW] Benign Traffic
+  Description: Legitimate network traffic — no attack detected.
+  Detected:    45383 records (80.2%)
+  Risk level:  LOW
+
+============================================================
+  SUMMARY: Detected 56555 attacks (100.0% of traffic) across 8 categories. Best model: xgboost with F1=0.9598.
+============================================================
